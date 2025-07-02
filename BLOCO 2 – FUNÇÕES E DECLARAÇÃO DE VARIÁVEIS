@@ -1,0 +1,113 @@
+QUESTÃO 6
+
+#include <iostream>
+using namespace std;
+
+int soma(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int x, y;
+    cout << "Digite o primeiro numero inteiro: ";
+    cin >> x;
+    cout << "Digite o segundo numero inteiro: ";
+    cin >> y;
+
+    int resultado = soma(x, y);
+    cout << "A soma de " << x << " e " << y << " é: " << resultado << endl;
+
+    return 0;#include <iostream>
+using namespace std;
+
+int soma(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int x, y;
+    cout << "Digite o primeiro número inteiro: ";
+    cin >> x;
+    cout << "Digite o segundo número inteiro: ";
+    cin >> y;
+
+    int resultado = soma(x, y);
+    cout << "A soma de " << x << " e " << y << " é: " << resultado << endl;
+
+    return 0;
+}
+}
+
+QUESTÃO 7
+#include <iostream>
+using namespace std;
+
+bool ehPar(int numero) {
+    return (numero % 2 == 0);
+}
+
+int main() {
+    int n;
+    cout << "Digite um numero inteiro: ";
+    cin >> n;
+
+    if (ehPar(n)) {
+        cout << n << " e par." << endl;
+    } else {
+        cout << n << " e impar." << endl;
+    }
+
+    return 0;
+}
+QUESTÃO 8
+#include <iostream>
+using namespace std;
+
+void mostrarMensagem() {
+    cout << "Olá! Bem-vindo ao Programa." << endl;
+}
+
+int main() {
+    mostrarMensagem();
+    return 0;
+}
+QUESTÃO 9
+
+#include <iostream>
+using namespace std;
+
+int quadrado(int num) {
+    return num * num;
+}
+
+int main() {
+    int valor;
+    cout << "Digite um número inteiro: ";
+    cin >> valor;
+
+    int resultado = quadrado(valor);
+    cout << "O quadrado de " << valor << " é: " << resultado << endl;
+
+    return 0;
+}
+
+QUESTÃO 10
+#include <iostream>
+using namespace std;
+
+float maior(float a, float b) {
+    return (a > b) ? a : b;
+}
+
+int main() {
+    float num1, num2;
+    cout << "Digite o primeiro número: ";
+    cin >> num1;
+    cout << "Digite o segundo número: ";
+    cin >> num2;
+
+    float maximo = maior(num1, num2);
+    cout << "O maior número entre " << num1 << " e " << num2 << " é: " << maximo << endl;
+
+    return 0;
+}
