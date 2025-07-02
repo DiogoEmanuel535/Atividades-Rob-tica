@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int soma(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int x, y;
+    cout << "Digite o primeiro número inteiro: ";
+    cin >> x;
+    cout << "Digite o segundo número inteiro: ";
+    cin >> y;
+
+    int resultado = soma(x, y);
+    cout << "A soma de " << x << " e " << y << " é: " << resultado << endl;
+
+    return 0;
+}
