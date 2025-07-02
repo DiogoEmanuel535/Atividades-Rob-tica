@@ -1,0 +1,113 @@
+QUESTão 1
+#include <iostream>
+using namespace std;
+
+int main() {
+    int inteiro = 10;
+    char caractere = 'A';
+    float numeroFloat = 3.14f;
+    double numeroDouble = 3.14159;
+    bool booleano = true;
+    short numeroShort = 100;
+    long numeroLong = 100000L;
+
+    cout << "Valor do inteiro: " << inteiro << endl;
+    cout << "Valor do caractere: " << caractere << endl;
+    cout << "Valor do float: " << numeroFloat << endl;
+    cout << "Valor do double: " << numeroDouble << endl;
+    cout << "Valor do booleano: " << booleano << endl;
+    cout << "Valor do short: " << numeroShort << endl;
+    cout << "Valor do long: " << numeroLong << endl;
+
+    return 0;
+}
+QUESTÃO 2
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num1, num2;
+
+    cout << "Digite o primeiro número inteiro: ";
+    cin >> num1;
+    cout << "Digite o segundo número inteiro: ";
+    cin >> num2;
+
+    int soma = num1 + num2;
+    int subtracao = num1 - num2;
+    int multiplicacao = num1 * num2;
+    double divisao = 0;
+    if (num2 != 0) {
+        divisao = static_cast<double>(num1) / num2;
+    }
+
+    cout << "\nResultados das operações:" << endl;
+    cout << num1 << " + " << num2 << " = " << soma << endl;
+    cout << num1 << " - " << num2 << " = " << subtracao << endl;
+    cout << num1 << " * " << num2 << " = " << multiplicacao << endl;
+    if (num2 != 0) {
+        cout << num1 << " / " << num2 << " = " << divisao << endl;
+    } else {
+        cout << "Divisão por zero não é permitida." << endl;
+    }
+
+    return 0;
+}
+QUESTÃO 3
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    const double PI = 3.14;
+    double raio;
+
+    cout << "Digite o valor do raio do círculo: ";
+    cin >> raio;
+    double area = PI * (raio * raio);
+    cout << "A área do círculo de raio " << raio << " é: " << area << endl;
+
+    return 0;
+}
+QUESTÃO 4
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 5, b = 2;
+    int resultadoInt = a / b;
+    
+    float c = 5.0f, d = 2.0f;
+    float resultadoFloat = c / d;
+    
+    double e = 5.0, f = 2.0;
+    double resultadoDouble = e / f;
+
+    cout << "Divisão de inteiros (5 / 2): " << resultadoInt << endl;
+    cout << "Divisão de float (5.0f / 2.0f): " << resultadoFloat << endl;
+    cout << "Divisão de double (5.0 / 2.0): " << resultadoDouble << endl;
+
+    return 0;
+}
+QUESTÃO 5
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string nome;
+    int idade;
+
+    cout << "Digite seu nome: ";
+    cin >> nome;
+    cout << "Digite sua idade: ";
+    cin >> idade;
+
+    cout << "\nOla, " << nome << "! ";
+    cout << "Voce tem " << idade << " anos." << endl;
+
+    return 0;
+}
