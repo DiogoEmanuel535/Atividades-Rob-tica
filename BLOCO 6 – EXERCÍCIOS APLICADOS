@@ -148,3 +148,57 @@ int main() {
     return 0;
 }
 QUESTÃO 30
+//funcoes.h
+
+#pragma once
+
+#include <iostream>
+using namespace std;
+
+// Função que demonstra passagem por valor
+void funcPorValor(int a) {
+    a = a * 2;
+    cout << "Dentro de funcPorValor: " << a << endl;
+}
+
+// Função que demonstra passagem por referência
+void funcPorReferencia(int &b) {
+    b = b * 2;
+    cout << "Dentro de funcPorReferencia: " << b << endl;
+}
+
+// Função que demonstra passagem por ponteiro
+void funcPorPonteiro(int *c) {
+    if (c != nullptr) {
+        *c = (*c) * 2;
+        cout << "Dentro de funcPorPonteiro: " << *c << endl;
+    }
+}
+//main.cpp
+#include <iostream>
+#include "funcoes.h"
+using namespace std;
+
+int main() {
+    int valor;
+
+    // Exemplo de passagem por valor
+    valor = 5;
+    cout << "Valor original: " << valor << endl;
+    funcPorValor(valor);
+    cout << "Valor após funcPorValor: " << valor << " (permaneceu igual)" << endl << endl;
+
+    // Exemplo de passagem por referência
+    valor = 5;
+    cout << "Valor original: " << valor << endl;
+    funcPorReferencia(valor);
+    cout << "Valor após funcPorReferencia: " << valor << endl << endl;
+
+    // Exemplo de passagem por ponteiro
+    valor = 5;
+    cout << "Valor original: " << valor << endl;
+    funcPorPonteiro(&valor);
+    cout << "Valor após funcPorPonteiro: " << valor << endl;
+
+    return 0;
+}
