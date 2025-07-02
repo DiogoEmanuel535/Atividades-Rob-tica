@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 5, b = 2;
+    int resultadoInt = a / b;
+    
+    float c = 5.0f, d = 2.0f;
+    float resultadoFloat = c / d;
+    
+    double e = 5.0, f = 2.0;
+    double resultadoDouble = e / f;
+
+    cout << "Divisão de inteiros (5 / 2): " << resultadoInt << endl;
+    cout << "Divisão de float (5.0f / 2.0f): " << resultadoFloat << endl;
+    cout << "Divisão de double (5.0 / 2.0): " << resultadoDouble << endl;
+
+    return 0;
+}
