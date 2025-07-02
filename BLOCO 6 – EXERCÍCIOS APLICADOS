@@ -1,0 +1,150 @@
+QUESTÃO 26
+#include <iostream>
+using namespace std;
+void somar() {
+    double a, b;
+    cout << "Digite dois números para somar: ";
+    cin >> a >> b;
+    cout << "Resultado da soma: " << (a + b) << endl;
+}
+void subtrair() {
+    double a, b;
+    cout << "Digite dois números para subtrair: ";
+    cin >> a >> b;
+    cout << "Resultado da subtração: " << (a - b) << endl;
+}
+
+void multiplicar() {
+    double a, b;
+    cout << "Digite dois números para multiplicar: ";
+    cin >> a >> b;
+    cout << "Resultado da multiplicação: " << (a * b) << endl;
+}
+void menu() {
+    int opcao;
+    cout << "Escolha uma operação:" << endl;
+    cout << "1 - Soma" << endl;
+    cout << "2 - Subtração" << endl;
+    cout << "3 - Multiplicação" << endl;
+    cout << "Digite a opção desejada: ";
+    cin >> opcao;
+
+    switch(opcao) {
+        case 1: somar(); break;
+        case 2: subtrair(); break;
+        case 3: multiplicar(); break;
+        default: cout << "Opção inválida!" << endl;
+    }
+}
+
+int main() {
+    menu();
+    return 0;
+}
+QUESTÃO 27
+#include <iostream>
+using namespace std;
+const double LIMITE_SAQUE = 500.0;
+
+void saque(double &saldo) {
+    double valor;
+    cout << "Digite o valor para saque: ";
+    cin >> valor;
+    if (valor > saldo) {
+        cout << "Saldo insuficiente." << endl;
+    } else if (valor > LIMITE_SAQUE) {
+        cout << "Valor excede o limite de saque." << endl;
+    } else {
+        saldo -= valor;
+        cout << "Saque efetuado. Saldo atual: " << saldo << endl;
+    }
+}
+void deposito(double &saldo) {
+    double valor;
+    cout << "Digite o valor para depósito: ";
+    cin >> valor;
+    saldo += valor;
+    cout << "Depósito efetuado. Saldo atual: " << saldo << endl;
+}
+void consultarSaldo(double saldo) {
+    cout << "Saldo atual: " << saldo << endl;
+}
+void menu() {
+    double saldo = 0.0;
+    int opcao;
+    do {
+        cout << "\n=== Caixa Eletrônico ===" << endl;
+        cout << "1 - Sacar" << endl;
+        cout << "2 - Depositar" << endl;
+        cout << "3 - Consultar Saldo" << endl;
+        cout << "0 - Sair" << endl;
+        cout << "Escolha uma opção: ";
+        cin >> opcao;
+
+        switch(opcao) {
+            case 1: saque(saldo); break;
+            case 2: deposito(saldo); break;
+            case 3: consultarSaldo(saldo); break;
+            case 0: cout << "Operação encerrada." << endl; break;
+            default: cout << "Opção inválida!" << endl;
+        }
+    } while(opcao != 0);
+}
+int main() {
+    menu();
+    return 0;
+}
+QUESTÃO 28
+#include <iostream>
+#include <string>
+using namespace std;
+struct Pessoa {
+    string nome;
+    int idade;
+    double altura;
+};
+
+void exibirPessoa(const Pessoa *p) {
+    cout << "Nome: " << p->nome << endl;
+    cout << "Idade: " << p->idade << " anos" << endl;
+    cout << "Altura: " << p->altura << " m" << endl;
+}
+
+int main() {
+    Pessoa pessoa;
+
+    cout << "Digite o nome: ";
+    cin >> pessoa.nome;
+    cout << "Digite a idade: ";
+    cin >> pessoa.idade;
+    cout << "Digite a altura (em metros): ";
+    cin >> pessoa.altura;
+    exibirPessoa(&pessoa);
+
+    return 0;
+}
+QUESTÃO 29
+#include <iostream>
+using namespace std;
+template <typename T>
+void trocarValores(T *a, T *b) {
+    T temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+
+    int x = 10, y = 20;
+    cout << "Antes da troca (int): x = " << x << ", y = " << y << endl;
+    trocarValores(&x, &y);
+    cout << "Depois da troca (int): x = " << x << ", y = " << y << endl;
+
+    float p = 1.5f, q = 2.5f;
+    cout << "\nAntes da troca (float): p = " << p << ", q = " << q << endl;
+    trocarValores(&p, &q);
+    cout << "Depois da troca (float): p = " << p << ", q = " << q << endl;
+
+    return 0;
+}
+QUESTÃO 30
