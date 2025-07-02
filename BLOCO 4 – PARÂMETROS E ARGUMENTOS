@@ -1,0 +1,118 @@
+QUESTÃO 16
+
+#include <iostream>
+using namespace std;
+void trocar(int &a, int &b) {
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+int main() {
+    int x, y;
+    cout << "Digite o valor de x: ";
+    cin >> x;
+    cout << "Digite o valor de y: ";
+    cin >> y;
+    cout << "\nAntes da troca: x = " << x << ", y = " << y << endl;
+    trocar(x, y);
+
+    cout << "Depois da troca: x = " << x << ", y = " << y << endl;
+
+    return 0;
+}
+QUESTÃO 17
+#include <iostream>
+using namespace std;
+
+// Função que recebe um número por valor e outro por referência e altera ambos
+void alterarValores(int valor, int &referencia) {
+    valor = valor + 10;         // Essa alteração NÃO afetará a variável original (passagem por valor)
+    referencia = referencia + 10; // Essa alteração mudará a variável original (passagem por referência)
+}
+
+int main() {
+    int a, b;
+    // Solicitando valores ao usuário
+    cout << "Digite um número (passado por valor): ";
+    cin >> a;
+    cout << "Digite outro número (passado por referência): ";
+    cin >> b;
+
+    // Exibindo valores antes da chamada
+    cout << "\nAntes: a = " << a << ", b = " << b << endl;
+
+    // Chamando a função que altera valores
+    alterarValores(a, b);
+
+    // Exibindo valores após a chamada
+    cout << "Depois: a = " << a << " (permaneceu igual), b = " << b << " (alterado)" << endl;
+
+    return 0;
+}
+QUESTÃO 18
+#include <iostream>
+using namespace std;
+void incrementar(int *p) {
+    if (p != nullptr) {
+        (*p)++;
+    }
+}
+
+int main() {
+    int numero;
+    cout << "Digite um número inteiro: ";
+    cin >> numero;
+    incrementar(&numero);
+    cout << "Valor após incremento: " << numero << endl;
+
+    return 0;
+}
+QUESTÃO 19
+#include <iostream>
+using namespace std;
+double calcularMedia(double n1, double n2, double n3) {
+    return (n1 + n2 + n3) / 3.0;
+}
+
+int main() {
+    double nota1, nota2, nota3;
+    cout << "Digite a primeira nota: ";
+    cin >> nota1;
+    cout << "Digite a segunda nota: ";
+    cin >> nota2;
+    cout << "Digite a terceira nota: ";
+    cin >> nota3;
+    double media = calcularMedia(nota1, nota2, nota3);
+
+    cout << "A média das três notas é: " << media << endl;
+
+    return 0;
+}
+QUESTÃO 20
+
+#include <iostream>
+#include <string>
+using namespace std;
+void exibirSituacao(string nome, double nota) {
+    cout << "\nAluno: " << nome << endl;
+    cout << "Nota: " << nota << endl;
+    if (nota >= 7.0) {
+        cout << "Situação: Aprovado" << endl;
+    } else {
+        cout << "Situação: Reprovado" << endl;
+    }
+}
+
+int main() {
+    string nomeAluno;
+    double nota;
+    cout << "Digite o nome do aluno: ";
+    cin >> nomeAluno;
+    cout << "Digite a nota do aluno: ";
+    cin >> nota;
+
+    exibirSituacao(nomeAluno, nota);
+
+    return 0;
+}
