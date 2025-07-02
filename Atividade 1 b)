@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num1, num2;
+
+    cout << "Digite o primeiro número inteiro: ";
+    cin >> num1;
+    cout << "Digite o segundo número inteiro: ";
+    cin >> num2;
+
+    int soma = num1 + num2;
+    int subtracao = num1 - num2;
+    int multiplicacao = num1 * num2;
+    double divisao = 0;
+    if (num2 != 0) {
+        divisao = static_cast<double>(num1) / num2;
+    }
+
+    cout << "\nResultados das operações:" << endl;
+    cout << num1 << " + " << num2 << " = " << soma << endl;
+    cout << num1 << " - " << num2 << " = " << subtracao << endl;
+    cout << num1 << " * " << num2 << " = " << multiplicacao << endl;
+    if (num2 != 0) {
+        cout << num1 << " / " << num2 << " = " << divisao << endl;
+    } else {
+        cout << "Divisão por zero não é permitida." << endl;
+    }
+
+    return 0;
+}
