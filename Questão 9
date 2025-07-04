@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int quadrado(int num) {
+    return num * num;
+}
+int main() {
+    int valor;
+    cout << "Digite um número inteiro: ";
+    cin >> valor;
+    int resultado = quadrado(valor);
+    cout << "O quadrado de " << valor << " é: " << resultado << endl;
+    return 0;
+}
