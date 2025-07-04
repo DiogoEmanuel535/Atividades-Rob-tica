@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+// Função que recebe um número por valor e outro por referência e altera ambos
+void alterarValores(int valor, int &referencia) {
+    valor = valor + 10;         // Essa alteração NÃO afetará a variável original (passagem por valor)
+    referencia = referencia + 10; // Essa alteração mudará a variável original (passagem por referência)
+}
+
+int main() {
+    int a, b;
+    // Solicitando valores ao usuário
+    cout << "Digite um número (passado por valor): ";
+    cin >> a;
+    cout << "Digite outro número (passado por referência): ";
+    cin >> b;
+
+    // Exibindo valores antes da chamada
+    cout << "\nAntes: a = " << a << ", b = " << b << endl;
+
+    // Chamando a função que altera valores
+    alterarValores(a, b);
+
+    // Exibindo valores após a chamada
+    cout << "Depois: a = " << a << " (permaneceu igual), b = " << b << " (alterado)" << endl;
+
+    return 0;
+}
