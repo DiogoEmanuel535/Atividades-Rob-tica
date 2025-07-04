@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+float maior(float a, float b) {
+    return (a > b) ? a : b;
+}
+
+int main() {
+    float num1, num2;
+    cout << "Digite o primeiro número: ";
+    cin >> num1;
+    cout << "Digite o segundo número: ";
+    cin >> num2;
+
+    float maximo = maior(num1, num2);
+    cout << "O maior número entre " << num1 << " e " << num2 << " é: " << maximo << endl;
+
+    return 0;
+}
