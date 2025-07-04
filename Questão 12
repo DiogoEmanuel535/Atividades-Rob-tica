@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+void dobrar(int *ptr) {
+    if (ptr != nullptr) {
+        *ptr = (*ptr) * 2;
+    }
+}
+
+int main() {
+    int numero;
+    cout << "Digite um número inteiro: ";
+    cin >> numero;
+    dobrar(&numero);
+    cout << "O valor dobrado é: " << numero << endl;
+
+    return 0;
+}
